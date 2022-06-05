@@ -160,19 +160,19 @@ java_version := $(shell echo '$(java_version_str)' | grep '^java .*[ "]1\.6[\. "
 javac_version := $(shell echo '$(javac_version_str)' | grep '[ "]1\.6[\. "$$]')
 endif # if LEGACY_USE_JAVA6
 
-ifeq ($(strip $(java_version)),)
-$(info ************************************************************)
-$(info You are attempting to build with the incorrect version)
-$(info of java.)
-$(info $(space))
-$(info Your version is: $(java_version_str).)
-$(info The required version is: $(required_version))
-$(info $(space))
-$(info Please follow the machine setup instructions at)
-$(info $(space)$(space)$(space)$(space)https://source.android.com/source/initializing.html)
-$(info ************************************************************)
-$(error stop)
-endif
+##ifeq ($(strip $(java_version)),)
+##$(info ************************************************************)
+##$(info You are attempting to build with the incorrect version)
+##$(info of java.)
+##$(info $(space))
+##$(info Your version is: $(java_version_str).)
+##$(info The required version is: $(required_version))
+##$(info $(space))
+##$(info Please follow the machine setup instructions at)
+##$(info $(space)$(space)$(space)$(space)https://source.android.com/source/initializing.html)
+##$(info ************************************************************)
+##$(error stop)
+##endif
 
 # Check for the current JDK.
 #
