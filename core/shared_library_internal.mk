@@ -13,9 +13,6 @@ endif
 ifeq ($(strip $(LOCAL_MODULE_SUFFIX)),)
 LOCAL_MODULE_SUFFIX := $(TARGET_SHLIB_SUFFIX)
 endif
-ifneq ($(strip $(OVERRIDE_BUILT_MODULE_PATH)),)
-$(error $(LOCAL_PATH): Illegal use of OVERRIDE_BUILT_MODULE_PATH)
-endif
 ifneq ($(strip $(LOCAL_MODULE_STEM)$(LOCAL_BUILT_MODULE_STEM)$(LOCAL_MODULE_STEM_32)$(LOCAL_MODULE_STEM_64)),)
 $(error $(LOCAL_PATH): Cannot set module stem for a library)
 endif
